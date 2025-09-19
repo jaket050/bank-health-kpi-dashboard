@@ -17,3 +17,17 @@ A portfolio-ready data project that ingests FDIC bank-level financials, builds a
 - GitHub (repo & docs)
 
 ## Repo Structure
+
+bank-health-kpi-dashboard/
+├─ data/
+│  ├─ raw/                # API extracts, scratch data
+│  └─ archive/            # archived CSVs from earlier iteration
+├─ docs/                  # documentation (KPI dictionary, pipeline notes, issue log, EDA plan)
+├─ notebooks/             # exploratory analysis and validation
+├─ sql/                   # schema, validation, indexing
+├─ src/
+│  ├─ etl/                # ETL scripts (load_fdic_api, transform_fdic_to_kpi, etc.)
+│  └─ utils/              # helper functions
+├─ config.ini             # DB + API config (ignored in GitHub)
+├─ requirements.txt       # Python dependencies
+└─ README.md
