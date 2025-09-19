@@ -1,0 +1,12 @@
+# Ignore configs
+config.ini
+
+# Ignore system files
+.DS_Store
+
+# Ignore raw data
+data/raw/*
+data/interim/*
+
+# Ignore virtual environment
+venv/
