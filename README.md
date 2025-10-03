@@ -25,6 +25,34 @@ Instead of one-off manual cleaning, I implemented automated steps that:
 
 This approach makes the workflow closer to production standards. Each run produces the same reliable KPIs, which is essential in financial analysis where consistency and auditability are critical.  
 
+### Quality Assurance
+All data and pipeline issues are documented in the [Issues Log](docs/issues_log.md),  
+with root causes, resolutions, and status tracking.
+
+### EDA Highlights
+
+As part of exploratory analysis, I validated KPIs and summarized key trends:
+
+- **Exploratory Insights (During EDA):**
+  - Profitability (ROA/ROE) is cyclical — median ROA dipped to ~0.27% in early 2024, rebounded to ~1.1% by year-end; ROE ended near 9.4%.  
+  - NIM compressed in early 2024, then rebounded by Q4.  
+  - NPL ratios trended upward, signaling growing loan book stress.  
+  - Capital adequacy remained stable (~11%), providing a regulatory buffer.  
+
+- **Executive Summary (2024Q4):**
+  - ROA = **0.92%** (↓2.0% YoY)  
+  - ROE = **9.4%** (↓6.5% YoY)  
+  - NIM = **3.13%** (↓0.4% YoY)  
+  - NPL = **26.1%** (↑35.4% YoY)  
+  - Capital Ratio = **9.7%** (↑2.2% YoY)  
+
+- **Data Quality:** <0.2% nulls, 0 duplicates, winsorized ratios at 1–99% to reduce outlier distortion.  
+
+- **Key Visuals:**  
+  ![ROA Trend](docs/eda_outputs/roa_trend_all.png)  
+  ![NIM Trend](docs/eda_outputs/nim_trend.png)  
+  ![NPL Trend](docs/eda_outputs/npl_trend.png)
+
 
 ## Repo Structure
 
